@@ -41,12 +41,13 @@
        // Document ready
 
           // PDPA
+	  var pdpaName = "pdpa_name";
           var pdpa = document.getElementById("pdpa_section");
           var pdpaBtnAccept = document.getElementById("pdpa_accept_all");
 
-          if( document.cookie.includes("roojai_pdpa") ){
+          if( document.cookie.includes(pdpaName) ){
             // Accepted cookie
-            console.log("roojai pdpa accepted");
+            console.log(pdpaName+" accepted");
               }else{
             // No cookie
             setTimeout(function() {
@@ -55,9 +56,9 @@
                 var vm = this;
                 var date = new Date();
                 date.setYear(date.getFullYear() + 1);
-                document.cookie = "roojai_pdpa=accept; expires="+ date.toGMTString() +"; path=/";
+                document.cookie = pdpaName+"=accept; expires="+ date.toGMTString() +"; path=/";
                 pdpa.classList.remove("pdpa_show");
-                console.log("roojai pdpa accepted");
+                console.log(pdpaName+"accepted");
               });
             }, 1000);
           }
