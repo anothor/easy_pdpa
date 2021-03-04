@@ -1,0 +1,51 @@
+#pdpa_cookie #pdpa_section{
+    padding: 1em 1em;
+    position: fixed;
+    z-index: 100;
+    background: #f1f2f6;
+    color: #000;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 0 5em rgba(0,0,0,.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.95);
+    line-height: initial;
+    text-align: center;
+}
+
+#pdpa_cookie #pdpa_section.pdpa_content {
+    transition: transform .3s ease, opacity .3s ease, visibility .3s ease!important;
+}
+
+#pdpa_cookie #pdpa_section.pdpa_content.pdpa_show{
+    opacity: 1;
+    visibility: visible!important;
+    transform: scale(1);
+}
+#pdpa_cookie #pdpa_text{
+    font-size: 0.9em;
+    line-height: 1.45em;
+    display: inline-block;
+    margin: 0;
+}
+
+#pdpa_cookie #pdpa_btn{
+    text-align: center;
+}
+
+#pdpa_cookie #pdpa_section .btn-pdpa-accept {
+    width: 80%;
+    height: auto;
+    line-height: initial;
+}
+
+@media screen and (min-width: 768px){
+    #pdpa_cookie #pdpa_btn{
+        display: inline-block;
+        margin-left: 1rem;
+    }
+    #pdpa_cookie #pdpa_section .btn-pdpa-accept {
+        width: auto;
+    }
+}
